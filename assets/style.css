@@ -92,3 +92,17 @@ section>h2 small{font-weight:400;color:var(--mut);font-size:.8rem;margin-left:8p
 .lawref{color:var(--law)}.t-exchange{background:var(--why-b);color:var(--why)}
 @media(max-width:600px){.qa{padding:4px 12px 12px}.tsecs{grid-template-columns:1fr;padding:0 10px 10px}.ans{grid-template-columns:30px 1fr}.albl{height:30px;line-height:30px;font-size:1.05rem}.dbody{margin:8px 6px;padding:10px}}
 @media print{.qa{break-inside:auto;border:0}.doc,.note{display:block}.fold details>*{display:block}.legendrow,.qindex,.pn,.filters,.search,.treebar,.map{display:none}}
+/* 推測・方法の比較・事後の是正 */
+:root{--guess:#6b5b95;--guess-b:#f1eef8;--fixc:#a3401f;--fix-b:#fbece6;--rec:#1b7a4d}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--guess:#b9a9e6;--guess-b:#262236;--fixc:#f0a184;--fix-b:#35211a;--rec:#74d1a0}}
+:root[data-theme=dark]{--guess:#b9a9e6;--guess-b:#262236;--fixc:#f0a184;--fix-b:#35211a;--rec:#74d1a0}
+.s-guess{--c:var(--guess);--b:var(--guess-b)}.s-guess .bd{border-style:dashed}
+.unc{margin:8px 0;padding:4px 14px;border-radius:6px;background:var(--guess-b);border:1px dashed var(--guess)}.unc h3{font-size:.86rem;margin:.5em 0 .2em;color:var(--guess)}.unc ul{margin:.2em 0 .5em;padding-left:1.3em;font-size:.9rem}
+.opts{margin:8px 0;padding:4px 14px 8px;border-radius:6px;border:1px solid var(--line);background:var(--panel)}.opts h3{font-size:.86rem;margin:.5em 0 .4em}
+.optgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.opt{border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.88rem}.opt.rec{border:2px solid var(--rec)}.opt h4{margin:.3em 0;font-size:.92rem}.od{margin:.2em 0;color:var(--mut)}
+.opt ul{margin:.1em 0 .4em;padding-left:1.2em}.om b{color:var(--plain);font-size:.8rem}.odm b{color:var(--warn);font-size:.8rem}
+.recb{display:inline-block;font-size:.7rem;background:var(--rec);color:var(--bg);border-radius:3px;padding:0 6px;margin-right:6px;vertical-align:1px}
+.orec{margin:.6em 0 .2em;font-size:.92rem;border-left:4px solid var(--rec);padding-left:10px}
+.fix{margin:8px 0;padding:4px 14px;border-radius:6px;background:var(--fix-b);border-left:4px solid var(--fixc)}.fix h3{font-size:.86rem;margin:.5em 0 .2em;color:var(--fixc)}.fw{margin:.2em 0;font-size:.9rem;font-weight:700}.fix ol{margin:.2em 0 .5em;padding-left:1.3em;font-size:.92rem}.fix ol li::marker{color:var(--fixc);font-weight:700}
+.opmark{flex:none;margin-top:.2em;font-size:.66rem;font-weight:700;color:var(--rec);border:1px solid var(--rec);border-radius:3px;padding:0 3px;margin-left:4px}
